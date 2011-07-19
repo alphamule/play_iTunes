@@ -1,9 +1,10 @@
+require 'rubygems'
+require 'appscript'
+include Appscript
+
 class CommandsController < ApplicationController
   def play
     begin
-      require 'rubygems'
-      require 'appscript'
-      include Appscript
       Appscript.app('iTunes.app').play
 
       @command = "play"
